@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--varanda-brown-dark: 25 35% 15%; /* Darker Brown for depth */
+		--varanda-brown: 30 25% 25%; /* Main Dark Brown */
+		--varanda-brown-light: 30 25% 35%; /* Lighter Brown for cards/popovers */
+		--varanda-gold: 35 60% 50%; /* Rich Gold for titles/primary elements */
+		--varanda-gold-light: 35 70% 65%; /* Lighter Gold for accents */
+		--varanda-beige: 35 30% 85%; /* Beige for text */
+		--varanda-beige-light: 35 40% 95%; /* Lighter Beige for secondary elements */
+		--varanda-beige-dark: 35 25% 65%; /* Darker Beige for borders/inputs */
+
+		--background: var(--varanda-brown);
+		--foreground: var(--varanda-beige);
+
+		--card: var(--varanda-brown-light);
+		--card-foreground: var(--varanda-beige);
+
+		--popover: var(--varanda-brown-light);
+		--popover-foreground: var(--varanda-beige);
+
+		--primary: var(--varanda-gold);
+		--primary-foreground: var(--varanda-brown-dark);
+
+		--secondary: var(--varanda-beige-light);
+		--secondary-foreground: var(--varanda-brown);
+
+		--muted: var(--varanda-brown-light);
+		--muted-foreground: var(--varanda-beige);
+
+		--accent: var(--varanda-gold-light);
+		--accent-foreground: var(--varanda-brown-dark);
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: var(--varanda-beige-light);
+
+		--border: var(--varanda-beige-dark);
+		--input: var(--varanda-beige-dark);
+		--ring: var(--varanda-gold);
+
+		--radius: 0.75rem;
+	}
+
+	.dark {
+		/* You can define dark mode specific variables here if needed */
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-family: theme('fontFamily.serif');
+		min-height: 100vh;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-serif font-semibold tracking-tight;
+		font-family: 'Georgia', serif; /* Rustic feel */
+		color: hsl(var(--varanda-gold));
+	}
+}
+
+.rustic-title {
+    font-family: 'Georgia', serif; /* Example of a rustic font */
+    /* text-shadow: 1px 1px 2px rgba(0,0,0,0.2); */ /* Optional shadow for depth */
+}
